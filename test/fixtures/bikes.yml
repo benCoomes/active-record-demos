@@ -3,11 +3,11 @@
 one:
   model: MyString
   year: 1
-  bike_type: 
+  kind: MyString
   price: 9.99
 
 two:
   model: MyString
   year: 1
-  bike_type: 
+  kind: MyString
   price: 9.99

@@ -14,9 +14,9 @@ class BikesTest < ApplicationSystemTestCase
     visit bikes_url
     click_on "New bike"
 
+    fill_in "Kind", with: @bike.kind
     fill_in "Model", with: @bike.model
     fill_in "Price", with: @bike.price
-    fill_in "Type", with: @bike.bike_type
     fill_in "Year", with: @bike.year
     click_on "Create Bike"
 
@@ -28,9 +28,9 @@ class BikesTest < ApplicationSystemTestCase
     visit bike_url(@bike)
     click_on "Edit this bike", match: :first
 
+    fill_in "Kind", with: @bike.kind
     fill_in "Model", with: @bike.model
     fill_in "Price", with: @bike.price
-    fill_in "Type", with: @bike.bike_type
     fill_in "Year", with: @bike.year
     click_on "Update Bike"
 

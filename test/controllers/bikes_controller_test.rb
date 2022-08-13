@@ -17,7 +17,7 @@ class BikesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create bike" do
     assert_difference("Bike.count") do
-      post bikes_url, params: { bike: { model: @bike.model, price: @bike.price, bike_type: @bike.bike_type, year: @bike.year } }
+      post bikes_url, params: { bike: { kind: @bike.kind, model: @bike.model, price: @bike.price, year: @bike.year } }
     end
 
     assert_redirected_to bike_url(Bike.last)
@@ -34,7 +34,7 @@ class BikesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update bike" do
-    patch bike_url(@bike), params: { bike: { model: @bike.model, price: @bike.price, bike_type: @bike.bike_type, year: @bike.year } }
+    patch bike_url(@bike), params: { bike: { kind: @bike.kind, model: @bike.model, price: @bike.price, year: @bike.year } }
     assert_redirected_to bike_url(@bike)
   end
 
